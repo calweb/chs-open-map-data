@@ -27,9 +27,6 @@ var map;
       document.getElementById('info-box').textContent =
        event.feature.getProperty('LABEL');
     });
-
-
-
   }, false);
 
   document.getElementById('checkMeters').addEventListener('click', function (event) {

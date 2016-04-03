@@ -1,7 +1,7 @@
 {
-  "name": "chs-open-data",
+  "name": "chs-open-map-data",
   "version": "1.0.0",
-  "description": "",
+  "description": "Charleston County, South Carolina Map data.",
   "main": "main.js",
   "dependencies": {
     "lodash": "^4.7.0",
