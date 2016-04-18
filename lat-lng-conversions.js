@@ -50,3 +50,26 @@ proj4.defs("ESRI:102733","+proj=lcc +lat_1=32.5 +lat_2=34.83333333333334 +lat_0=
 
   });
   parkingMetersData.features = meterLatLng;
+
+// Charleston park transforms
+
+  var parksLatLng = _.map(chsParks.features, function (item) {
+    return {
+      type: item.type,
+      id: item.id,
+      geometry_name: item.geometry_name,
+      properties: item.properties,
+      geometry: {
+        type: item.geometry.type,
+        coordinates: [[
+                      fixBrokenPolygon.call(this, _.chain(item.geometry.coordinates)
+                        .flattenDepth(2)
+                        .map(function (element) {
+                          return proj4('ESRI:102733').inverse(element)
+                        })
+                        .value())
+                    ]]
+      }
+    }
+  });
+  chsParks.features = parksLatLng;
