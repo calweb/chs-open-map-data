@@ -31,6 +31,20 @@ var map;
     map.setZoom(16);
     map.setCenter({lat: 32.784893, lng:-79.936352 });
   }, false);
+  document.getElementById('checkParks').addEventListener('click', function (event) {
+    map.data.forEach(function(feat) {
+      map.data.remove(feat);
+    });
+    map.data.addGeoJson(chsParks);
+    map.setZoom(12);
+    map.setCenter({lat: 32.784893, lng:-79.936352 });
+    map.controls[google.maps.ControlPosition.LEFT_CENTER].push(document.getElementById('info-box'));
+    map.data.addListener('mouseover', function(event) {
+      document.getElementById('info-box').textContent =
+       event.feature.getProperty('NAME');
+       console.log(event)
+    });
+  }, false);
 
   initMap();
 })();
