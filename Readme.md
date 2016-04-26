@@ -10,3 +10,15 @@ The raw map data can be found:
 - [SC DHEC GIS Data Clearninghouse (registration required)](http://www.scdhec.gov/HomeAndEnvironment/maps/GIS/GISDataClearinghouse/)
 
 To view the data on the map: http://calweb.github.io/chs-open-map-data/
+
+Currently, the map shows data for the following:
+
+- Public Parks (Charleston GIS)
+- Parking Meters (Charleston GIS)
+- Subdivisions (Charleston GIS)
+- Beach Access Points (SC DHEC)
+- South Carolina Watersheds (SC DHEC)
+
+This map is just to display the data and has very basic functionality. I'm just aggregating the geojson here in this repo, but I'd love to make some fun apps with this information in the future or make available the data as geojson with latitude and longitude converted so anyone else can make!
+
+The data on these maps could become stale pretty quickly, so you'd have to download the data again from the sources and reconvert.
