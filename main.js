@@ -10,9 +10,9 @@ var map;
       document.getElementById('legend'));
 
   }
-  
+
   document.getElementById('checkNeighborhood').addEventListener('click', function (event) {
-    loadNewFeatureLayer(map, 12, '/chs-subdivisions.geojson');
+    loadNewFeatureLayer(map, 12, 'chs-subdivisions.geojson');
     map.controls[google.maps.ControlPosition.LEFT_CENTER].push(document.getElementById('info-box'));
     map.data.addListener('mouseover', function(event) {
       document.getElementById('info-box').textContent =
@@ -21,12 +21,12 @@ var map;
   }, false);
 
   document.getElementById('checkMeters').addEventListener('click', function (event) {
-    loadNewFeatureLayer(map, 16, '/chs-parking-meters.geojson');
+    loadNewFeatureLayer(map, 16, 'chs-parking-meters.geojson');
 
   }, false);
 
   document.getElementById('checkParks').addEventListener('click', function (event) {
-    loadNewFeatureLayer(map, 12, '/chs-parks.geojson');
+    loadNewFeatureLayer(map, 12, 'chs-parks.geojson');
 
     map.controls[google.maps.ControlPosition.LEFT_CENTER].push(document.getElementById('info-box'));
     map.data.addListener('mouseover', function(event) {
@@ -36,7 +36,7 @@ var map;
   }, false);
 
   document.getElementById('beachAccess').addEventListener('click', function (event) {
-    loadNewFeatureLayer(map, 12, '/BEACH_ACCESS.geojson');
+    loadNewFeatureLayer(map, 12, 'BEACH_ACCESS.geojson');
 
     map.controls[google.maps.ControlPosition.LEFT_CENTER].push(document.getElementById('info-box'));
     map.data.addListener('mouseover', function(event) {
@@ -46,7 +46,7 @@ var map;
   }, false);
 
   document.getElementById('checkSheds').addEventListener('click', function (event) {
-    loadNewFeatureLayer(map, 10, '/TMDL_Sheds.geojson');
+    loadNewFeatureLayer(map, 10, 'TMDL_Sheds.geojson');
 
     map.controls[google.maps.ControlPosition.LEFT_CENTER].push(document.getElementById('info-box'));
 
