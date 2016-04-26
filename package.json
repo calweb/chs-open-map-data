@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "convert": "node conversions/lat-lng-convert.js"
   },
   "author": "Calvin Webster <calweb@gmail.com>",
   "license": "MIT"

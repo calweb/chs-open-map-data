@@ -4,6 +4,13 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
+      #map {
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top:0;
+        left:0;
+      }
       #legend, #info-box {
         background-color: white;
         padding:10px;
@@ -20,22 +27,18 @@
     </style>
   </head>
   <body>
-    <div id="map" style="width: 100%; height: 100%; position:absolute; top:0;left:0;"></div>
+    <div id="map"></div>
     <div id="legend">
       <input id="checkNeighborhood" type="radio" name="layerChoose" value=""> Neighborhoods
       <input id="checkMeters" type="radio" name="layerChoose" value=""> Parking Meters
-      <input id="checkParks" type="radio" name="layerChoose" value=""> Parks
+      <input id="checkParks" type="radio" name="layerChoose" value=""> Charleston Parks
+      <input id="beachAccess" type="radio" name="layerChoose" value=""> Beach Access (Charleston Area)
+      <input id="checkSheds" type="radio" name="layerChoose" value=""> Watersheds in SC
     </div>
     <div id="info-box"></div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCAYCXrMRZCXrevgJzhWcLZKYBze2GaBg"
  type="text/javascript"></script>
-    <script src="node_modules/lodash/lodash.js" charset="utf-8"></script>
-    <script src="node_modules/proj4/dist/proj4.js" charset="utf-8"></script>
-    <script src="subdiv-chs-raw.js" charset="utf-8"></script>
-    <script src="parking-meters-raw.js" charset="utf-8"></script>
-    <script src="chs-parks.js" charset="utf-8"></script>
-    <script src="lat-lng-conversions.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
 
   </body>
